@@ -32,7 +32,6 @@ class TuringMachine:
         self.head_position += 1 if direction == 'R' else -1
         return True
 
-
     def run(self):
         while self.current_state not in self.accept_states:
             if not self.step():
@@ -46,7 +45,7 @@ def load_machine_config(filename):
 def menu():
     print("\n=== Máquina de Turing - Cifrado César ===")
     print("1. Encriptar mensaje")
-    print("2. Desencriptar mensaje")
+    print("2. Desencriptar último mensaje encriptado")
     print("3. Salir")
     choice = input("Selecciona una opción: ")
     return choice
@@ -59,20 +58,25 @@ def main():
     decryption_config = load_machine_config("decryption_machine.json")
     decryption_tm = TuringMachine(**decryption_config)
 
+    # Variable para almacenar el mensaje encriptado
+    last_encrypted_message = None
+
     while True:
         choice = menu()
         if choice == "1":
             message = input("Ingresa el mensaje para encriptar (formato: k#mensaje): ")
             encryption_tm.load_tape(message)
             print("\nProceso de encriptación:")
-            encrypted_message = encryption_tm.run()
-            print(f"\nMensaje encriptado: {encrypted_message}")
+            last_encrypted_message = encryption_tm.run()
+            print(f"\nMensaje encriptado: {last_encrypted_message}")
         elif choice == "2":
-            message = input("Ingresa el mensaje para desencriptar (formato: k#mensaje): ")
-            decryption_tm.load_tape(message)
-            print("\nProceso de desencriptación:")
-            decrypted_message = decryption_tm.run()
-            print(f"\nMensaje desencriptado: {decrypted_message}")
+            if last_encrypted_message is None:
+                print("\nNo hay ningún mensaje encriptado para desencriptar.")
+            else:
+                decryption_tm.load_tape(last_encrypted_message)
+                print("\nProceso de desencriptación:")
+                decrypted_message = decryption_tm.run()
+                print(f"\nMensaje desencriptado: {decrypted_message}")
         elif choice == "3":
             print("Saliendo del programa. ¡Hasta luego!")
             break
