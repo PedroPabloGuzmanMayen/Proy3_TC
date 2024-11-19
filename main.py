@@ -32,7 +32,6 @@ class TuringMachine:
         self.head_position += 1 if direction == 'R' else -1
         return True
 
-
     def run(self):
         while self.current_state not in self.accept_states:
             if not self.step():
@@ -43,13 +42,32 @@ def load_machine_config(filename):
     with open(filename, 'r') as f:
         return json.load(f)
 
+def validate_input(message):
+    """Validar que el mensaje siga el formato 'k#mensaje'."""
+    if '#' not in message or len(message.split('#')) != 2:
+        print("Formato inválido. Debe ser 'k#mensaje' donde 'k' es la llave.")
+        return False
+    return True
+
+def show_examples():
+    """Mostrar ejemplos de encriptación y desencriptación."""
+    print("\n=== Ejemplos de Encriptación y Desencriptación ===")
+    examples = [
+        ("3#ROMA NO FUE CONSTRUIDA EN UN DIA", "URPD QR IXH FRQVWUXLGD HQ XQ GLD"),
+        ("2#PYTHON ES DIVERTIDO", "RAVJQP GU FKXGTXKFQ")
+    ]
+    for original, encrypted in examples:
+        print(f"Original: {original}")
+        print(f"Encriptado: {encrypted}")
+        print()
+
 def menu():
     print("\n=== Máquina de Turing - Cifrado César ===")
     print("1. Encriptar mensaje")
     print("2. Desencriptar mensaje")
-    print("3. Salir")
-    choice = input("Selecciona una opción: ")
-    return choice
+    print("3. Mostrar ejemplos")
+    print("4. Salir")
+    return input("Selecciona una opción: ")
 
 def main():
     # Cargar configuraciones de las máquinas
@@ -63,17 +81,23 @@ def main():
         choice = menu()
         if choice == "1":
             message = input("Ingresa el mensaje para encriptar (formato: k#mensaje): ")
+            if not validate_input(message):
+                continue
             encryption_tm.load_tape(message)
             print("\nProceso de encriptación:")
             encrypted_message = encryption_tm.run()
             print(f"\nMensaje encriptado: {encrypted_message}")
         elif choice == "2":
             message = input("Ingresa el mensaje para desencriptar (formato: k#mensaje): ")
+            if not validate_input(message):
+                continue
             decryption_tm.load_tape(message)
             print("\nProceso de desencriptación:")
             decrypted_message = decryption_tm.run()
             print(f"\nMensaje desencriptado: {decrypted_message}")
         elif choice == "3":
+            show_examples()
+        elif choice == "4":
             print("Saliendo del programa. ¡Hasta luego!")
             break
         else:
