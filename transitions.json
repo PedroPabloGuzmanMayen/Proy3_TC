@@ -1,0 +1,162 @@
+{
+    "q0": {
+        "-": {
+            "(A, -)": {
+                "memory_value": "A",
+                "tape1_value": "A",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(B, -)": {
+                "memory_value": "B",
+                "tape1_value": "B",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(C, -)": {
+                "memory_value": "C",
+                "tape1_value": "C",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(D, -)": {
+                "memory_value": "D",
+                "tape1_value": "D",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(E, -)": {
+                "memory_value": "E",
+                "tape1_value": "E",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(F, -)": {
+                "memory_value": "F",
+                "tape1_value": "F",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(G, -)": {
+                "memory_value": "G",
+                "tape1_value": "G",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(H, -)": {
+                "memory_value": "H",
+                "tape1_value": "H",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(I, -)": {
+                "memory_value": "I",
+                "tape1_value": "I",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(J, -)": {
+                "memory_value": "J",
+                "tape1_value": "J",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(K, -)": {
+                "memory_value": "K",
+                "tape1_value": "K",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(L, -)": {
+                "memory_value": "L",
+                "tape1_value": "L",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(M, -)": {
+                "memory_value": "M",
+                "tape1_value": "M",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(N, -)": {
+                "memory_value": "N",
+                "tape1_value": "N",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(O, -)": {
+                "memory_value": "O",
+                "tape1_value": "O",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(P, -)": {
+                "memory_value": "P",
+                "tape1_value": "P",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(Q, -)": {
+                "memory_value": "Q",
+                "tape1_value": "Q",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(R, -)": {
+                "memory_value": "R",
+                "tape1_value": "R",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(S, -)": {
+                "memory_value": "S",
+                "tape1_value": "S",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(T, -)": {
+                "memory_value": "T",
+                "tape1_value": "T",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(U, -)": {
+                "memory_value": "U",
+                "tape1_value": "U",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(V, -)": {
+                "memory_value": "V",
+                "tape1_value": "V",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(W, -)": {
+                "memory_value": "W",
+                "tape1_value": "W",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(X, -)": {
+                "memory_value": "X",
+                "tape1_value": "X",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(Y, -)": {
+                "memory_value": "Y",
+                "tape1_value": "Y",
+                "tape2_value": "-",
+                "movement": "R"
+            },
+            "(Z, -)": {
+                "memory_value": "Z",
+                "tape1_value": "Z",
+                "tape2_value": "-",
+                "movement": "R"
+            }
+        }
+    }
+}
