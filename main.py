@@ -1,5 +1,6 @@
 import json
-
+from TM import TuringMachine
+'''
 class TuringMachine:
     def __init__(self, states, input_alphabet, tape_alphabet, initial_state, accept_states, transitions):
         self.states = states
@@ -60,7 +61,30 @@ def show_examples():
         print(f"Original: {original}")
         print(f"Encriptado: {encrypted}")
         print()
+'''
 
+def show_examples():
+    """Mostrar ejemplos de encriptación y desencriptación."""
+    print("\n=== Ejemplos de Encriptación y Desencriptación ===")
+    examples = [
+        ("D#ROMA NO FUE CONSTRUIDA EN UN DIA", "URPD QR IXH FRQVWUXLGD HQ XQ GLD"),
+        ("C#PYTHON ES DIVERTIDO", "RAVJQP GU FKXGTXKFQ")
+    ]
+    for original, encrypted in examples:
+        print(f"Original: {original}")
+        print(f"Encriptado: {encrypted}")
+        print()
+
+def validate_input(message):
+    """Validar que el mensaje siga el formato 'k#mensaje'."""
+    if '#' not in message or len(message.split('#')) != 2:
+        print("Formato inválido. Debe ser 'k#mensaje' donde 'k' es la llave.")
+        return False
+    return True
+
+def load_machine_config(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
 def menu():
     print("\n=== Máquina de Turing - Cifrado César ===")
     print("1. Encriptar mensaje")
@@ -71,10 +95,10 @@ def menu():
 
 def main():
     # Cargar configuraciones de las máquinas
-    encryption_config = load_machine_config("encryption_machine.json")
+    encryption_config = load_machine_config("test_encryption_machine.json")
     encryption_tm = TuringMachine(**encryption_config)
 
-    decryption_config = load_machine_config("decryption_machine.json")
+    decryption_config = load_machine_config("test_decryption_machine.json")
     decryption_tm = TuringMachine(**decryption_config)
 
     while True:
@@ -83,18 +107,15 @@ def main():
             message = input("Ingresa el mensaje para encriptar (formato: k#mensaje): ")
             if not validate_input(message):
                 continue
-            encryption_tm.load_tape(message)
+            encryption_tm.cipher(message)
             print("\nProceso de encriptación:")
-            encrypted_message = encryption_tm.run()
-            print(f"\nMensaje encriptado: {encrypted_message}")
+            print(f"\nMensaje encriptado: {encryption_tm.cipher(message)}")
         elif choice == "2":
             message = input("Ingresa el mensaje para desencriptar (formato: k#mensaje): ")
             if not validate_input(message):
                 continue
-            decryption_tm.load_tape(message)
             print("\nProceso de desencriptación:")
-            decrypted_message = decryption_tm.run()
-            print(f"\nMensaje desencriptado: {decrypted_message}")
+            print(f"\nMensaje desencriptado: {decryption_tm.cipher(message)}")
         elif choice == "3":
             show_examples()
         elif choice == "4":

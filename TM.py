@@ -25,13 +25,9 @@ class TuringMachine:
 
     def step(self):
         current_symbol = self.tape[self.head_position]
-        print(f"Current symbol: {current_symbol}")
         tape2_symbol = self.output_tape[self.head_position]
-        print(f"Current symbol tape2: {tape2_symbol}")
-        print(f"Memory: {self.memory}")
         values = self.transitions[self.current_state][self.memory][f"({current_symbol},{tape2_symbol})"]
         self.current_state = values["next_state"]
-        print(f"Next state: {self.current_state}")
         self.memory = values["memory_value"]
         self.output_tape[self.head_position] = values["tape2_value"]
         if values["movement"] == "R":
@@ -43,7 +39,16 @@ class TuringMachine:
         self.generate_output_tape()
         while self.current_state not in self.accept_states:
             self.step()
-        pass
+        
+        groups = ''.join(self.output_tape).strip().split()
+        result = ' '.join(groups)
+        #Reiniciar configuracion de la maquina
+        self.current_state = self.initial_state
+        self.memory = " "
+        self.output_tape = []
+        self.head_position = 0
+        self.tape = []
+        return result
 
     def run(self):
         while self.current_state not in self.accept_states:
@@ -55,18 +60,4 @@ def load_machine_config(filename):
     with open(filename, 'r') as f:
         return json.load(f)
     
-machine = TuringMachine(**load_machine_config('test_encryption_machine.json'))
 
-print(machine.input_alphabet)
-
-print(machine.output_tape)
-
-print(machine.transitions["q0"][" "]["(D, )"])
-
-
-
-
-
-machine.cipher("O#HOLA COMO ESTAS")
-
-print(machine.output_tape)
