@@ -287,7 +287,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "A", "tape1_value": "X", "tape2_value": "X", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "A", "tape1_value": "W", "tape2_value": "Y", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "A", "tape1_value": "Z", "tape2_value": "Z", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "A", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
                 },
             "B": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "B", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -317,7 +318,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "B", "tape1_value": "X", "tape2_value": "Y", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "B", "tape1_value": "Y", "tape2_value": "Z", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "B", "tape1_value": "Z", "tape2_value": "A", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "B", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "C": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "C", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -347,7 +349,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "C", "tape1_value": "X", "tape2_value": "Z", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "C", "tape1_value": "Y", "tape2_value": "A", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "C", "tape1_value": "Z", "tape2_value": "B", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "C", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "D":{
                 "(#, )": {"next_state": "q_parsing", "memory_value": "D", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -377,7 +380,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "D", "tape1_value": "X", "tape2_value": "A", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "D", "tape1_value": "Y", "tape2_value": "B", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "D", "tape1_value": "Z", "tape2_value": "C", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "D", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
 
             },
             "E":{
@@ -408,7 +412,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "E", "tape1_value": "X", "tape2_value": "B", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "E", "tape1_value": "Y", "tape2_value": "C", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "E", "tape1_value": "Z", "tape2_value": "D", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "E", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "F":{
                 "(#, )": {"next_state": "q_parsing", "memory_value": "F", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -438,7 +443,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "F", "tape1_value": "X", "tape2_value": "C", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "F", "tape1_value": "Y", "tape2_value": "D", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "F", "tape1_value": "Z", "tape2_value": "E", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "F", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
 
             },
             "G": {
@@ -469,7 +475,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "G", "tape1_value": "X", "tape2_value": "D", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "G", "tape1_value": "Y", "tape2_value": "E", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "G", "tape1_value": "Z", "tape2_value": "F", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "G", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "H": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "H", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -499,7 +506,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "H", "tape1_value": "X", "tape2_value": "E", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "H", "tape1_value": "Y", "tape2_value": "F", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "H", "tape1_value": "Z", "tape2_value": "G", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "H", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "I": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "I", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -529,7 +537,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "I", "tape1_value": "X", "tape2_value": "F", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "I", "tape1_value": "Y", "tape2_value": "G", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "I", "tape1_value": "Z", "tape2_value": "H", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "I", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "J": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "J", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -559,7 +568,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "J", "tape1_value": "X", "tape2_value": "G", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "J", "tape1_value": "Y", "tape2_value": "H", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "J", "tape1_value": "Z", "tape2_value": "I", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "J", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "K": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "K", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -589,7 +599,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "K", "tape1_value": "X", "tape2_value": "H", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "K", "tape1_value": "Y", "tape2_value": "I", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "K", "tape1_value": "Z", "tape2_value": "J", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "K", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "L": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "L", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -619,7 +630,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "L", "tape1_value": "X", "tape2_value": "I", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "L", "tape1_value": "Y", "tape2_value": "J", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "L", "tape1_value": "Z", "tape2_value": "K", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "L", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "M": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "M", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -649,7 +661,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "M", "tape1_value": "X", "tape2_value": "J", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "M", "tape1_value": "Y", "tape2_value": "K", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "M", "tape1_value": "Z", "tape2_value": "L", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "M", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "N": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "N", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -679,7 +692,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "N", "tape1_value": "X", "tape2_value": "K", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "N", "tape1_value": "Y", "tape2_value": "L", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "N", "tape1_value": "Z", "tape2_value": "M", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "N", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "O": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "O", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -709,7 +723,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "O", "tape1_value": "X", "tape2_value": "L", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "O", "tape1_value": "Y", "tape2_value": "M", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "O", "tape1_value": "Z", "tape2_value": "N", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "O", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "P": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "P", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -739,7 +754,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "P", "tape1_value": "X", "tape2_value": "M", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "P", "tape1_value": "Y", "tape2_value": "N", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "P", "tape1_value": "Z", "tape2_value": "O", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "P", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "Q": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "Q", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -769,7 +785,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "Q", "tape1_value": "X", "tape2_value": "N", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "Q", "tape1_value": "Y", "tape2_value": "O", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "Q", "tape1_value": "Z", "tape2_value": "P", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "Q", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "R": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "R", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -799,7 +816,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "R", "tape1_value": "X", "tape2_value": "O", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "R", "tape1_value": "Y", "tape2_value": "P", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "R", "tape1_value": "Z", "tape2_value": "Q", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "R", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "S": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "S", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -829,7 +847,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "S", "tape1_value": "X", "tape2_value": "P", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "S", "tape1_value": "Y", "tape2_value": "Q", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "S", "tape1_value": "Z", "tape2_value": "R", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "S", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "T": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "T", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -859,7 +878,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "T", "tape1_value": "X", "tape2_value": "Q", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "T", "tape1_value": "Y", "tape2_value": "R", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "T", "tape1_value": "Z", "tape2_value": "S", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "T", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "U": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "U", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -889,7 +909,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "U", "tape1_value": "X", "tape2_value": "R", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "U", "tape1_value": "Y", "tape2_value": "S", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "U", "tape1_value": "Z", "tape2_value": "T", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "U", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "V": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "V", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -919,7 +940,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "V", "tape1_value": "X", "tape2_value": "S", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "V", "tape1_value": "Y", "tape2_value": "T", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "V", "tape1_value": "Z", "tape2_value": "U", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "V", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "W": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "W", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -949,7 +971,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "W", "tape1_value": "X", "tape2_value": "T", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "W", "tape1_value": "Y", "tape2_value": "U", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "W", "tape1_value": "Z", "tape2_value": "V", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "W", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "X": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "X", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -979,7 +1002,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "X", "tape1_value": "X", "tape2_value": "U", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "X", "tape1_value": "Y", "tape2_value": "V", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "X", "tape1_value": "Z", "tape2_value": "W", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "X", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "Y": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "Y", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -1009,7 +1033,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "Y", "tape1_value": "X", "tape2_value": "V", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "Y", "tape1_value": "Y", "tape2_value": "W", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "Y", "tape1_value": "Z", "tape2_value": "X", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "Y", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             },
             "Z": {
                 "(#, )": {"next_state": "q_parsing", "memory_value": "Z", "tape1_value": "#", "tape2_value": " ", "movement": "R"},
@@ -1039,7 +1064,8 @@
                 "(X, )": {"next_state": "q_parsing", "memory_value": "Z", "tape1_value": "X", "tape2_value": "W", "movement": "R"},
                 "(Y, )": {"next_state": "q_parsing", "memory_value": "Z", "tape1_value": "Y", "tape2_value": "X", "movement": "R"},
                 "(Z, )": {"next_state": "q_parsing", "memory_value": "Z", "tape1_value": "Z", "tape2_value": "Y", "movement": "R"},
-                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"}
+                "( , )": {"next_state": "q_accept", "memory_value": " ", "tape1_value": " ", "tape2_value": " ", "movement": "R"},
+                "(_, )": {"next_state": "q_parsing", "memory_value": "Z", "tape1_value": "_", "tape2_value": " ", "movement": "R"}
             }  
         }
     }

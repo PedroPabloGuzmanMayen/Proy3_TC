@@ -15,7 +15,8 @@ class TuringMachine:
         self.current_state = initial_state
 
     def load_tape(self, input_string):
-        self.tape = list(input_string.upper()) + [" "]  # Convertir a mayúsculas y agregar símbolo en blanco
+        result = input_string.replace(" ", "_")
+        self.tape = list(result.upper()) + [" "]  # Convertir a mayúsculas y agregar símbolo en blanco
         self.head_position = 0
         print(f"Cinta cargada: {''.join(self.tape)}")  # Depuración
 
@@ -66,6 +67,6 @@ print(machine.transitions["q0"][" "]["(D, )"])
 
 
 
-machine.cipher("D#HOLA")
+machine.cipher("O#HOLA COMO ESTAS")
 
 print(machine.output_tape)
